@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% load widget_tweaks %}
+<h3 style="text-align:center">Fill Salary Of Teacher</h3>
+<form method="POST" autocomplete="off" style="margin:100px;margin-top: 0px;">
+    {%csrf_token%}
+    <div class="form-group">
+      <label for="salary">Salary</label>
+      {% render_field teacherSalary.salary class="form-control" placeholder="5000" %}
+    </div>
+    
+
+    <button type="submit" class="btn btn-primary">Approve</button>
+  </form>
+<br><br><br>
+{% endblock  %}

@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% load widget_tweaks %}
+<section class="pt-80 pb-80">
+    <div class="container">
+    <div class="row">
+      <div class="col-sm-8 section-heading">
+             <h5>Chat</h5>
+      </div>
+    </div>
+        <div class="row mt-50">
+            <div class="col-sm-7 section-heading">
+              <h3 class="font-600 mt-0">Messager</h3>
+                <div class="tr-form-subscribe mt-30">
+                  <form class="signup-form remove-margin" method="post">
+                    <div class="input-group password-input-group">
+                        <label for="cars">Choose a Teacher:</label>
+                        <select class="newsletter-input form-control form-group" name="cars" id="cars">
+                          <option class="newsletter-input form-control form-group" value="volvo">Volvo</option>
+                          <option class="newsletter-input form-control form-group" value="saab">Saab</option>
+                          <option class="newsletter-input form-control form-group" value="opel">Opel</option>
+                          <option class="newsletter-input form-control form-group" value="audi">Audi</option>
+                        </select>
+                    </div>
+                      <div class="input-group password-input-group">
+                          <textarea type="text" name="message" id="Email" style="width: 100%; height: 20%;" class="newsletter-input form-control form-group" value="" placeholder="Message"></textarea>
+            <button type="submit" class="newsletter-submit btn btn-color btn-md btn-circle" name="subscribe" id="Subscribe">
+              <span>Chat</span>
+            </button>
+                      </div>
+                  </form>
+                 </div>
+          </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+<section class="pt-80 pb-80">
+    <div class="container">
+    <div class="row">
+      <div class="col-sm-8 section-heading">
+             <h5>Subscribe Style 01</h5>
+      </div>
+    </div>
+        <div class="row mt-50">
+            <div class="col-sm-7 section-heading">
+              <h3 class="font-600 mt-0">Subscribe to our newsletter</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed fermentum nibh, vel aliquet massa. Etiam in magna id risus lacinia luctus eget eu est.</p>
+                <div class="tr-form-subscribe mt-30">
+                  <form class="signup-form remove-margin" method="post">
+                      <div class="input-group password-input-group">
+                          <input type="email" name="EMAIL" id="Email" class="newsletter-input form-control form-group border-radius-25" value="" placeholder="Your Mail Address">
+            <button type="submit" class="newsletter-submit btn btn-color btn-md btn-circle" name="subscribe" id="Subscribe">
+              <span>sign up now</span>
+            </button>
+                      </div>
+                  </form>
+                 </div>
+          </div>
+        </div>
+    </div>
+</section>

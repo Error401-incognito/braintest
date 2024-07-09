@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load widget_tweaks %}
+
+    <div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <form class="box" method="post">
+                    <div style="margin: 20px;">
+                    {% csrf_token %}
+                    <h1>TEACHER LOGIN</h1>
+                    <p class="text-muted"> Please enter your login and password!</p>
+                    </div>
+                    <input type="hidden" name="teacher" value="teacher"/>
+                    <div style="margin: 20px;">
+                        {% render_field form.username class="form-control" placeholder="Username" %}
+                    </div>
+                    <div style="margin: 20px;">
+                        {% render_field form.password class="form-control" placeholder="Password" %}
+                    </div>
+                    <div style="margin: 20px;">
+                     <input class="btn btn-sm btn-dark btn-square margin-left-auto margin-right-auto display-table-sm" type="submit" name="" value="Login">
+                    </div>
+                   
+                </form>
+                <div style="margin: 20px;">
+                    <input id="btn-register" class="btn btn-sm btn-dark btn-square margin-left-auto margin-right-auto display-table-sm" type="button" name="" value="Registration">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br>
+<script>
+    var btn = document.getElementById('btn-register');
+    btn.onclick = function(){
+        window.location.href = "http://127.0.0.1:8000/teacher/teachersignup";
+    }
+</script>
+{% endblock %}
+

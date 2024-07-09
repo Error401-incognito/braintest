@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load widget_tweaks %}
+
+    <div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <form class="box" method="post">
+                    {% csrf_token %}
+                    <div style="margin: 20px;">
+                    <h2>STUDENT LOGIN</h2>
+                    <p class="text-muted"> Please enter your login and password!</p>
+                    </div>
+                    <div style="margin: 20px;">
+                     {% render_field form.username class="form-control" placeholder="Username" %}
+                    </div>
+                    <div style="margin: 20px;">
+                     {% render_field form.password class="form-control" placeholder="Password" %}
+                    </div>
+                <div style="margin: 20px;">
+                     <input class="btn btn-sm btn-dark btn-square margin-left-auto margin-right-auto display-table-sm" type="submit" name="" value="Login">
+                </div>
+                </form>
+                <div style="margin: 20px;">
+                 <input id="btn-register" class="btn btn-sm btn-dark btn-square margin-left-auto margin-right-auto display-table-sm" type="submit" name="" value="Registeration">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br>
+<script>
+    var btn = document.getElementById('btn-register');
+    btn.onclick = function(){
+        window.location.href = "http://127.0.0.1:8000/student/studentsignup";
+    }
+</script>
+{% endblock %}
